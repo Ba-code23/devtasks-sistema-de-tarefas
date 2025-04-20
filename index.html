@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="DevTasks - Sistema de gerenciamento de tarefas com login simulado, dashboard dinâmico e modo escuro/claro." />
+    <title>DevTasks - Sistema de Tarefas</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- Tela de login inicial -->
+    <div id="loginScreen">
+        <h1>DevTasks</h1>
+        <input type="text" id="usernameInput" placeholder="Digite seu nome" required />
+        <button id="loginBtn">Entrar</button>
+    </div>
+
+    <div id="app" class="hidden">
+        <header>
+            <h1>DevTasks</h1>
+            <div>
+                <button id="toggleTheme">Modo Escuro</button>
+                <button id="logoutBtn">Sair</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="dashboard">
+                <div class="card total">
+                    <h3>Total de Tarefas</h3>
+                    <p id="totalTasks">0</p>
+                </div>
+                <div class="card done">
+                    <h3>Concluídas</h3>
+                    <p id="doneTasks">0</p>
+                </div>
+            </section>
+
+            <section class="task-controls">
+                <input type="text" id="taskInput" placeholder="Nova tarefa..." />
+                <button id="addTaskBtn">Adicionar</button>
+            </section>
+
+            <section class="task-list" id="taskList">
+                <!-- Tarefas vão aparecer aqui -->
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+    <noscript>
+        <p>Este site requer JavaScript para funcionar corretamente.</p>
+    </noscript>
+</body>
+
+</html>
